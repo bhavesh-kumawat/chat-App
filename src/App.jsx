@@ -16,7 +16,7 @@ function App() {
   const generateAIAnswer = async (query) => {
     setIsSubmit(true);
     const res = await axios({
-      url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyDpg-LD1NzBIKcVLLYwcdQYxsTcAvqUCF8",
+      url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyCSNDGkTQ9VILd24NKxA56L1RKgFZ5fu_Y",
       method: "post",
       data: { contents: [{ parts: [{ text: query }] }] },
     });
@@ -41,7 +41,9 @@ function App() {
   return (
     <>
       <div className="header">
-        <img src={logo} alt="logo" className="logo" />
+        <a href="/">
+          <img src={logo} alt="logo" className="logo" />
+        </a>
         <h2>Hello👋🏼</h2>
       </div>
 
